@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the Mokkaa Coffee menu — signature coffees, specialty lattes, cold brews, bakery treats, and seasonal specials in Miraj, Maharashtra.">
+  <title>Menu — Mokkaa Coffee | Handcrafted Coffee &amp; Bites | Miraj</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/menu-page.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar" role="navigation">
+  <a href="index.html" class="navbar-logo">Mokkaa Coffee</a>
+  <div class="navbar-nav" role="menubar">
+    <a href="about.html" role="menuitem">About</a>
+    <a href="menu.html" class="active" role="menuitem">Menu</a>
+    <a href="blog.html" role="menuitem">Journal</a>
+  </div>
+  <a href="reservation.html" class="navbar-cta">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+    </svg>
+    Reserve
+  </a>
+  <button class="navbar-toggle" id="nav-toggle" aria-label="Toggle mobile menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-menu-close" id="mobile-menu-close">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="menu.html">Menu</a>
+  <a href="blog.html">Journal</a>
+  <a href="reservation.html">Reserve</a>
+</div>
+
+
+<!-- PAGE HERO -->
+<header class="page-header" style="padding-top: 120px;">
+  <svg class="page-header-bean" style="top:20%;left:8%;" viewBox="0 0 60 40">
+    <ellipse cx="30" cy="20" rx="28" ry="18" fill="#6B3A1F"/><path d="M30 4 Q38 20 30 36 Q22 20 30 4Z" fill="#4A2510" opacity="0.6"/>
+  </svg>
+  <svg class="page-header-bean" style="top:25%;right:10%;width:32px;animation-delay:1s;" viewBox="0 0 60 40">
+    <ellipse cx="30" cy="20" rx="28" ry="18" fill="#7A4525"/><path d="M30 4 Q38 20 30 36 Q22 20 30 4Z" fill="#5A3015" opacity="0.6"/>
+  </svg>
+  <svg class="page-header-bean" style="bottom:15%;left:28%;width:50px;animation-delay:1.5s;" viewBox="0 0 60 40">
+    <ellipse cx="30" cy="20" rx="28" ry="18" fill="#5C3018"/><path d="M30 4 Q38 20 30 36 Q22 20 30 4Z" fill="#3E1E0A" opacity="0.6"/>
+  </svg>
+
+  <div class="page-header-line"></div>
+  <h1>OUR MENU</h1>
+  <p>Mokkaa Coffee, Miraj — a celebration of craftsmanship and curated taste.</p>
+</header>
+
+<!-- Full width image -->
+<div class="photo-break" style="height: 55vh;">
+  <img src="assets/images/hero_latte.png" alt="Coffee and pastry" loading="eager">
+</div>
+
+
+<!-- MENU LAYOUT -->
+<main class="menu-page">
+  <div class="menu-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="menu-sidebar" aria-label="Menu categories">
+
+      <button class="menu-category-btn active" data-category="signature" id="cat-btn-signature">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+        </svg>
+        Signature Coffee
+      </button>
+
+      <button class="menu-category-btn" data-category="lattes" id="cat-btn-lattes">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/>
+        </svg>
+        Specialty Lattes
+      </button>
+
+      <button class="menu-category-btn" data-category="tea" id="cat-btn-tea">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/>
+        </svg>
+        Tea &amp; Matcha
+      </button>
+
+      <button class="menu-category-btn" data-category="bakery" id="cat-btn-bakery">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        Bakery &amp; Desserts
+      </button>
+
+      <button class="menu-category-btn" data-category="breakfast" id="cat-btn-breakfast">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>
+        </svg>
+        Breakfast &amp; Bites
+      </button>
+
+    </aside>
+
+
+    <!-- MENU ITEMS -->
+    <div class="menu-content">
+
+      <!-- SIGNATURE COFFEE -->
+      <section class="menu-category-section" id="category-signature" aria-label="Signature Coffee">
+        <h2 class="menu-category-title">Signature Coffee</h2>
+        <div class="menu-items-grid">
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/espresso_shot.png" alt="Signature Espresso" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Signature Espresso</div>
+              <div class="menu-item-price">$6.50</div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/barista_craft.png" alt="Velvet Caramel Latte" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Velvet Caramel Latte</div>
+              <div class="menu-item-price">$8.90</div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/hero_latte.png" alt="Classic Cappuccino" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Classic Cappuccino</div>
+              <div class="menu-item-price">$7.80</div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/vanilla_cold_brew.png" alt="Artisan Cold Brew" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Artisan Cold Brew</div>
+              <div class="menu-item-price">$9.50</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- SPECIALTY LATTES -->
+      <section class="menu-category-section" id="category-lattes" aria-label="Specialty Lattes">
+        <h2 class="menu-category-title">Specialty Lattes</h2>
+        <div class="menu-items-grid">
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/vanilla_cold_brew.png" alt="Vanilla Cloud Latte" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Vanilla Cloud Latte</div>
+              <div class="menu-item-price">$8.40</div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/coffee_beans_seasonal.png" alt="Hazelnut Dream" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Hazelnut Dream</div>
+              <div class="menu-item-price">$9.20</div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/hero_latte.png" alt="Honey Oat Latte" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Honey Oat Latte</div>
+              <div class="menu-item-price">$8.80</div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/barista_craft.png" alt="Cinnamon Rose Latte" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Cinnamon Rose Latte</div>
+              <div class="menu-item-price">$9.40</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- TEA & MATCHA -->
+      <section class="menu-category-section" id="category-tea" aria-label="Tea and Matcha">
+        <h2 class="menu-category-title">Tea &amp; Matcha</h2>
+        <div class="menu-items-grid">
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/matcha_latte.png" alt="Matcha Harmony" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Matcha Harmony</div>
+              <div class="menu-item-price">$9.80</div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/testimonial_coffee.png" alt="Jasmine Bloom Tea" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Jasmine Bloom Tea</div>
+              <div class="menu-item-price">$6.50</div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/matcha_latte.png" alt="Iced Matcha Mist" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Iced Matcha Mist</div>
+              <div class="menu-item-price">$10.20</div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/cafe_blog1.png" alt="Chai Spice Latte" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Chai Spice Latte</div>
+              <div class="menu-item-price">$8.20</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- BAKERY & DESSERTS -->
+      <section class="menu-category-section" id="category-bakery" aria-label="Bakery and Desserts">
+        <h2 class="menu-category-title">Bakery &amp; Desserts</h2>
+        <div class="menu-items-grid">
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/blueberry_muffin.png" alt="Blueberry Muffin" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Blueberry Muffin</div>
+              <div class="menu-item-price">$6.20</div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/croissant_plate.png" alt="Butter Croissant" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Butter Croissant</div>
+              <div class="menu-item-price">$5.80</div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/blueberry_muffin.png" alt="Chocolate Tart" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Chocolate Tart</div>
+              <div class="menu-item-price">$7.50</div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/croissant_plate.png" alt="Almond Danish" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Almond Danish</div>
+              <div class="menu-item-price">$6.80</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- BREAKFAST & BITES -->
+      <section class="menu-category-section" id="category-breakfast" aria-label="Breakfast and Bites">
+        <h2 class="menu-category-title">Breakfast &amp; Bites</h2>
+        <div class="menu-items-grid">
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/croissant_plate.png" alt="Avocado Toast" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Avocado Toast</div>
+              <div class="menu-item-price">$12.50</div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/cafe_blog2.png" alt="Granola Bowl" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Granola Bowl</div>
+              <div class="menu-item-price">$11.80</div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/blueberry_muffin.png" alt="Egg &amp; Cheese Bagel" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Egg &amp; Cheese Bagel</div>
+              <div class="menu-item-price">$10.20</div>
+            </div>
+          </div>
+
+          <div class="menu-item-card">
+            <div class="menu-item-img">
+              <img src="assets/images/cafe_blog3.png" alt="Seasonal Fruit Plate" loading="lazy">
+              <div class="menu-item-overlay"></div>
+              <div class="menu-item-name">Seasonal Fruit Plate</div>
+              <div class="menu-item-price">$9.00</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div><!-- end .menu-content -->
+  </div><!-- end .menu-layout -->
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer" aria-label="Site footer">
+  <div class="footer-brand-watermark" aria-hidden="true">
+    <div class="footer-watermark-bg">
+      <img src="assets/images/barista_craft.png" alt="" loading="lazy">
+    </div>
+    <span class="footer-watermark-text">mokkaa</span>
+  </div>
+  <div class="footer-main">
+    <div class="footer-top">
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="blog.html">Journal</a>
+        <a href="#">Privacy Policy</a>
+      </nav>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/mokkaaa.coffee" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Mokkaa Coffee on Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">All rights reserved by @Mokkaa Coffee, Miraj</p>
+      <p class="footer-credit">Parshwanath Nagar, Miraj, Maharashtra 416416 · Open Tue–Sun 10am–10pm</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+/* ===== DESIGN TOKENS ===== */
+:root {
+  /* Colors */
+  --cream: #F0EDE6;
+  --cream-light: #F5F2EC;
+  --off-white: #E8E4DC;
+  --dark-brown: #2A1008;
+  --forest-green: #1A4A2E;
+  --medium-brown: #5C3D2E;
+  --warm-tan: #C8B89A;
+  --warm-tan-light: #D9CCBA;
+  --warm-tan-card: #CEC0AE;
+  --card-bg: #E2DBD0;
+  --text-dark: #1A1208;
+  --text-medium: #4A3728;
+  --text-light: #7A6858;
+  --text-muted: #9A8878;
+  --black: #0A0A0A;
+  --footer-bg: #111111;
+  --white: #FFFFFF;
+
+  /* Nav */
+  --nav-pill-bg: rgba(255, 255, 255, 0.88);
+  --nav-pill-border: rgba(200, 184, 154, 0.3);
+
+  /* Card borders */
+  --card-border: rgba(180, 140, 80, 0.35);
+  --card-border-hover: rgba(180, 140, 80, 0.7);
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing */
+  --section-pad: 120px;
+  --section-pad-sm: 80px;
+  --container-max: 1320px;
+  --container-pad: 40px;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(42, 16, 8, 0.08);
+  --shadow-md: 0 8px 32px rgba(42, 16, 8, 0.12);
+  --shadow-lg: 0 20px 60px rgba(42, 16, 8, 0.18);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-mid: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-slow: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}

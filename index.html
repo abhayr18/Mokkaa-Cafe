@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mokkaa Coffee — A premium café in Miraj, Maharashtra. Handcrafted coffee, warm ambiance, and moments worth remembering. Located inside Sanjay Bhokare Group of Institutes, Parshwanath Nagar.">
+  <title>Mokkaa Coffee — Experience The Art Of Coffee Culture | Miraj</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="navbar-logo" aria-label="Mokkaa Coffee home">Mokkaa Coffee</a>
+
+  <div class="navbar-nav" role="menubar">
+    <a href="about.html" role="menuitem">About</a>
+    <a href="menu.html" role="menuitem">Menu</a>
+    <a href="blog.html" role="menuitem">Journal</a>
+  </div>
+
+  <a href="reservation.html" class="navbar-cta" id="nav-reserve-btn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+    </svg>
+    Reserve
+  </a>
+
+  <button class="navbar-toggle" id="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="menu.html">Menu</a>
+  <a href="blog.html">Journal</a>
+  <a href="reservation.html">Reserve</a>
+</div>
+
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero" aria-label="Hero">
+  <div class="hero-bg-blur"></div>
+
+  <!-- Floating Coffee Beans (SVG-based) -->
+  <svg class="coffee-bean-img bean-1" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="30" cy="20" rx="28" ry="18" fill="#6B3A1F" rx="14"/>
+    <path d="M30 4 Q38 20 30 36 Q22 20 30 4Z" fill="#4A2510" opacity="0.6"/>
+  </svg>
+  <svg class="coffee-bean-img bean-2" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="30" cy="20" rx="28" ry="18" fill="#7A4525"/>
+    <path d="M30 4 Q38 20 30 36 Q22 20 30 4Z" fill="#5A3015" opacity="0.6"/>
+  </svg>
+  <svg class="coffee-bean-img bean-3" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="30" cy="20" rx="28" ry="18" fill="#5C3018"/>
+    <path d="M30 4 Q38 20 30 36 Q22 20 30 4Z" fill="#3E1E0A" opacity="0.6"/>
+  </svg>
+  <svg class="coffee-bean-img bean-4" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="30" cy="20" rx="28" ry="18" fill="#7A4525"/>
+    <path d="M30 4 Q38 20 30 36 Q22 20 30 4Z" fill="#5A3015" opacity="0.6"/>
+  </svg>
+  <svg class="coffee-bean-img bean-5" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="30" cy="20" rx="28" ry="18" fill="#6B3A1F"/>
+    <path d="M30 4 Q38 20 30 36 Q22 20 30 4Z" fill="#4A2510" opacity="0.6"/>
+  </svg>
+  <svg class="coffee-bean-img bean-6" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="30" cy="20" rx="28" ry="18" fill="#5C3018"/>
+    <path d="M30 4 Q38 20 30 36 Q22 20 30 4Z" fill="#3E1E0A" opacity="0.6"/>
+  </svg>
+
+  <div class="hero-content">
+    <h1 class="reveal">Experience The Art Of<br>Coffee Culture In Miraj</h1>
+    <p class="hero-sub reveal reveal-delay-1">Handcrafted Coffee, Warm Ambiance, And<br>Moments Worth Remembering.</p>
+    <div class="hero-buttons reveal reveal-delay-2">
+      <a href="reservation.html" class="btn btn-primary" id="hero-reserve-btn">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+        Reserve Table
+      </a>
+      <a href="about.html" class="btn btn-secondary" id="hero-explore-btn">Explore Ambience</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== FULL-WIDTH LATTE PHOTO ===== -->
+<div class="photo-break" aria-hidden="true">
+  <img src="assets/images/hero_latte.png" alt="Artisan latte art closeup" loading="eager">
+</div>
+
+
+<!-- ===== HIGHLIGHTS (STACKING CARDS) ===== -->
+<section class="highlights-section" id="highlights" aria-label="Our Highlights">
+  <div class="highlights-header">
+    <p class="section-label">Our Highlights</p>
+    <h2 class="section-heading reveal">Moments And Details<br>That Set Us Apart</h2>
+  </div>
+
+  <div class="stacking-cards-wrapper">
+    <div class="stacking-cards-container">
+
+      <div class="stack-card reveal">
+        <img src="assets/images/cafe_interior.png" alt="Elegant Mokkaa Coffee Ambience" loading="lazy">
+        <span class="stack-card-label">Elegant Ambience</span>
+      </div>
+
+      <div class="stack-card reveal reveal-delay-1">
+        <img src="assets/images/hero_latte.png" alt="Handcrafted Coffee at Mokkaa" loading="lazy">
+        <span class="stack-card-label">Handcrafted Coffee</span>
+      </div>
+
+      <div class="stack-card reveal reveal-delay-2">
+        <img src="assets/images/barista_craft.png" alt="Skilled Baristas at Mokkaa Coffee" loading="lazy">
+        <span class="stack-card-label">Skilled Baristas</span>
+      </div>
+
+      <div class="stack-card reveal reveal-delay-3">
+        <img src="assets/images/coffee_beans_seasonal.png" alt="Seasonal Specials at Mokkaa" loading="lazy">
+        <span class="stack-card-label">Seasonal Specials</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== HERITAGE ===== -->
+<section class="heritage-section section" id="heritage" aria-label="Our Heritage">
+  <div class="container">
+    <p class="section-label reveal">Our Story</p>
+    <h2 class="section-heading reveal">Inspired By Heritage<br>Crafted With Precision</h2>
+
+    <div class="heritage-grid">
+      <div class="heritage-image reveal">
+        <img src="assets/images/cafe_interior.png" alt="Mokkaa Coffee beautiful café interior" loading="lazy">
+      </div>
+
+      <div class="heritage-content reveal reveal-delay-1">
+        <h2>A Coffee Haven<br>In The Heart of Miraj</h2>
+        <p>Mokkaa Coffee is Miraj's premium café experience — nestled within the Sanjay Bhokare Group of Institutes campus in Parshwanath Nagar. We combine exceptional coffee with comfortable spaces designed for connection, creativity, and calm.</p>
+        <p>Every detail — from our carefully curated drinks to our warm, welcoming interiors — reflects our commitment to more than just a beverage. It's about creating a space where guests can relax, connect, and enjoy meaningful moments.</p>
+
+        <a href="about.html" class="btn btn-primary" id="heritage-know-more-btn" style="margin-bottom: 48px;">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+          </svg>
+          Know More
+        </a>
+
+        <div class="heritage-stats">
+          <div class="stat-item">
+            <div class="stat-number" data-target="4" data-suffix=".5 ★">4.5 ★</div>
+            <div class="stat-label">Google Rating from happy guests.</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="10" data-suffix=" am–10 pm">10 am–10 pm</div>
+            <div class="stat-label">Open Tue–Sun. Closed on Monday.</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="100" data-suffix="%">100%</div>
+            <div class="stat-label">Dedicated to quality coffee & warmth.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== SIGNATURE MENU ===== -->
+<section class="menu-preview-section section" id="menu-preview" aria-label="Signature Menu">
+  <div class="container">
+    <p class="section-label reveal">Signature Menu</p>
+    <h2 class="section-heading reveal">Handpicked Selections<br>Loved By Our Guests</h2>
+
+    <div class="menu-cards-grid">
+
+      <div class="menu-card reveal">
+        <div class="menu-card-image">
+          <img src="assets/images/espresso_shot.png" alt="Signature Espresso" loading="lazy">
+          <div class="menu-card-overlay"></div>
+          <div class="menu-card-name">Signature Espresso</div>
+          <div class="menu-card-price">Classic</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal reveal-delay-1">
+        <div class="menu-card-image">
+          <img src="assets/images/vanilla_cold_brew.png" alt="Cold Brew Coffee" loading="lazy">
+          <div class="menu-card-overlay"></div>
+          <div class="menu-card-name">Cold Brew Coffee</div>
+          <div class="menu-card-price">Specialty</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal reveal-delay-2">
+        <div class="menu-card-image">
+          <img src="assets/images/matcha_latte.png" alt="Mokkaa Special Latte" loading="lazy">
+          <div class="menu-card-overlay"></div>
+          <div class="menu-card-name">Mokkaa Special Latte</div>
+          <div class="menu-card-price">Signature</div>
+        </div>
+      </div>
+
+      <div class="menu-card reveal reveal-delay-3">
+        <div class="menu-card-image">
+          <img src="assets/images/blueberry_muffin.png" alt="Freshly Baked Pastries" loading="lazy">
+          <div class="menu-card-overlay"></div>
+          <div class="menu-card-name">Freshly Baked Pastries</div>
+          <div class="menu-card-price">Bakery</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="menu-preview-cta reveal">
+      <a href="menu.html" class="btn btn-primary" id="explore-menu-btn">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
+        </svg>
+        Explore Our Menu
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== WORKSPACE SECTION ===== -->
+<section class="workspace-section section" id="workspace" aria-label="Café Workspace">
+  <div class="container">
+    <p class="section-label reveal">Café Workspace</p>
+    <h2 class="section-heading reveal">Designed For Work,<br>Comfort &amp; Inspiration</h2>
+
+    <div class="workspace-grid">
+      <!-- Left card -->
+      <div class="workspace-info-card reveal">
+        <div>
+          <h3>A space where productivity &amp; ideas grow naturally</h3>
+          <p>Whether you're a student from the nearby Sanjay Bhokare campus or a professional looking for a quiet corner, Mokkaa Coffee offers the perfect setting to focus, create, and connect.</p>
+        </div>
+        <div class="workspace-badges">
+          <span class="workspace-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+            </svg>
+            Great Coffee
+          </span>
+          <span class="workspace-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/>
+            </svg>
+            Study-Friendly
+          </span>
+        </div>
+      </div>
+
+      <!-- Right stacked images -->
+      <div class="workspace-right">
+        <div class="workspace-hero-image reveal reveal-delay-1">
+          <img src="assets/images/cafe_workspace.png" alt="Person working at Mokkaa Coffee" loading="lazy">
+        </div>
+        <div class="workspace-bottom">
+          <div class="workspace-feature-image reveal reveal-delay-2">
+            <img src="assets/images/cafe_team.png" alt="Collaborative café workspace" loading="lazy">
+          </div>
+          <div class="workspace-text-card reveal reveal-delay-3">
+            <div>
+              <h4>Comfortable spaces designed for productive work and study sessions</h4>
+              <p>Whether you're working remotely, studying for exams, or meeting casually, our thoughtfully designed space supports focus, comfort, and distraction-free productivity.</p>
+            </div>
+            <div class="workspace-text-card-badges">
+              <span class="workspace-text-card-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:14px;height:14px;">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+                Dine In
+              </span>
+              <span class="workspace-text-card-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:14px;height:14px;">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/>
+                </svg>
+                Calm Vibe
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials-section section" id="testimonials" aria-label="Guest Experience">
+  <div class="container">
+    <p class="section-label reveal">Guest Experience</p>
+    <h2 class="section-heading reveal">Words That Reflect Our<br>Guests' Experiences</h2>
+
+    <div class="testimonials-layout">
+      <div class="testimonial-image reveal">
+        <img src="assets/images/testimonial_coffee.png" alt="Coffee cup at Mokkaa Coffee" loading="lazy">
+      </div>
+
+      <!-- Testimonial card — rendered by carousel.js -->
+      <div class="testimonial-card reveal reveal-delay-1">
+        <!-- Populated by JS -->
+        <div style="display:flex;align-items:center;justify-content:center;height:200px;color:var(--text-muted);font-size:14px;">
+          Loading reviews…
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery-section section" id="gallery" aria-label="Our Beautiful Café">
+  <div class="container">
+    <div class="gallery-header">
+      <p class="section-label reveal">Our Beautiful Café</p>
+      <h2 class="section-heading reveal">Moments Captured<br>Inside Mokkaa Coffee</h2>
+    </div>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-card reveal">
+      <img src="assets/images/cafe_team.png" alt="Mokkaa Coffee team" loading="lazy">
+    </div>
+    <div class="gallery-card reveal reveal-delay-1">
+      <img src="assets/images/barista_craft.png" alt="Barista crafting at Mokkaa Coffee" loading="lazy">
+    </div>
+    <div class="gallery-card reveal reveal-delay-2">
+      <img src="assets/images/croissant_plate.png" alt="Freshly baked pastries at Mokkaa" loading="lazy">
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== BLOG / COFFEE JOURNAL ===== -->
+<section class="blog-section section" id="blog" aria-label="Coffee Journal">
+  <div class="container">
+    <p class="section-label reveal">Coffee Journal</p>
+    <h2 class="section-heading reveal">Insights On Coffee,<br>Culture &amp; Living</h2>
+
+    <div class="blog-grid">
+
+      <article class="blog-card reveal">
+        <div class="blog-card-image">
+          <img src="assets/images/cafe_blog1.png" alt="Morning coffee ritual" loading="lazy">
+          <a href="blog.html" class="blog-card-arrow" aria-label="Read article">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+            </svg>
+          </a>
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-tag">Coffee Culture</p>
+          <h3 class="blog-card-title">The Morning Ritual: How Coffee Sets The Tone For Your Day</h3>
+          <p class="blog-card-excerpt">Explore how a mindful morning coffee routine can transform your mood, focus, and overall well-being...</p>
+          <div class="blog-card-meta"><span>June 12, 2025</span><span>·</span><span>4 min read</span></div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal reveal-delay-1">
+        <div class="blog-card-image">
+          <img src="assets/images/cafe_blog2.png" alt="Coffee beans and gear" loading="lazy">
+          <a href="blog.html" class="blog-card-arrow" aria-label="Read article">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+            </svg>
+          </a>
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-tag">Craft &amp; Technique</p>
+          <h3 class="blog-card-title">From Bean To Cup: Understanding Single-Origin Coffee</h3>
+          <p class="blog-card-excerpt">Dive into the world of single-origin beans and why terroir matters as much in coffee as it does in wine...</p>
+          <div class="blog-card-meta"><span>May 28, 2025</span><span>·</span><span>6 min read</span></div>
+        </div>
+      </article>
+
+      <article class="blog-card reveal reveal-delay-2">
+        <div class="blog-card-image">
+          <img src="assets/images/cafe_blog3.png" alt="Latte art surrounded by coffee beans" loading="lazy">
+          <a href="blog.html" class="blog-card-arrow" aria-label="Read article">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+            </svg>
+          </a>
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-tag">Café Living</p>
+          <h3 class="blog-card-title">Why Café Culture Is More Than Just Coffee</h3>
+          <p class="blog-card-excerpt">A café is a meeting point for ideas, creativity, and human connection — discover what makes it a third place...</p>
+          <div class="blog-card-meta"><span>May 10, 2025</span><span>·</span><span>5 min read</span></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== FAQ ===== -->
+<section class="faq-section section" id="faq" aria-label="Frequently Asked Questions">
+  <div class="container">
+    <div class="faq-layout">
+      <div class="faq-left reveal">
+        <p class="section-label" style="justify-content:flex-start;">
+          <span>Café Answered</span>
+        </p>
+        <h2>Your Mokkaa<br>Questions<br>Answered</h2>
+      </div>
+
+      <div class="faq-list reveal reveal-delay-1">
+
+        <div class="faq-item" id="faq-1">
+          <button class="faq-question" aria-expanded="true" aria-controls="faq-answer-1">
+            Where is Mokkaa Coffee located?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-1" role="region">
+            <div class="faq-answer-inner">We are located at Parshwanath Nagar, Miraj, Sangli Miraj Kupwad, Maharashtra 416416 — inside the Sanjay Bhokare Group of Institutes Faculty of Engineering campus. Look for us right on the campus grounds!</div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-2">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+            What are your opening hours?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-2" role="region">
+            <div class="faq-answer-inner">We are open Tuesday through Sunday from 10:00 AM to 10:00 PM. We are closed on Mondays. Visit our Google Maps listing or Instagram @mokkaaa.coffee for the latest updates on timings and special holiday hours.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-3">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+            Do You Offer Dine-In?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-3" role="region">
+            <div class="faq-answer-inner">Yes! Mokkaa Coffee offers a comfortable dine-in experience in a warm, beautifully designed space. Whether you're catching up with friends, studying, or simply enjoying a quiet cup — we have a spot for you.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-4">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+            Are Non-Coffee Beverages Available?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-4" role="region">
+            <div class="faq-answer-inner">Of course! Our menu features an extensive selection of specialty drinks beyond coffee. We believe every guest deserves an exceptional beverage experience, coffee lover or not.</div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="faq-5">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+            Do You Accept Table Reservations?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq-answer-5" role="region">
+            <div class="faq-answer-inner">Yes, we welcome reservations for groups and special occasions. You can fill out our reservation form online, or reach out to us through Instagram @mokkaaa.coffee. Walk-ins are always welcome based on availability.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== RESERVE CTA SECTION ===== -->
+<section class="reserve-section" id="reserve-cta" aria-label="Reserve a table">
+  <div class="reserve-bg">
+    <img src="assets/images/espresso_shot.png" alt="Espresso being pulled at Mokkaa Coffee" loading="lazy">
+  </div>
+  <div class="reserve-content container">
+    <div class="reserve-form-card reveal">
+      <h2>Reserve Your Moment<br>At Mokkaa Coffee</h2>
+      <p>Step into a space where refined ambiance and masterfully crafted coffee await. Book your visit to Mokkaa Coffee, Miraj today.</p>
+
+      <form id="reserve-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="reserve-name">Full Name</label>
+            <input type="text" id="reserve-name" name="name" placeholder="Your name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="reserve-phone">Phone</label>
+            <input type="tel" id="reserve-phone" name="phone" placeholder="+91 00000 00000" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="reserve-date">Date</label>
+            <input type="date" id="reserve-date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="reserve-guests">Guests</label>
+            <select id="reserve-guests" name="guests">
+              <option value="1">1 Guest</option>
+              <option value="2" selected>2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5">5+ Guests</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="reserve-special">Special Requests</label>
+          <textarea id="reserve-special" name="special" placeholder="Any dietary needs or special occasions…"></textarea>
+        </div>
+
+        <button type="submit" class="form-submit" id="reserve-submit-btn">
+          <svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Confirm Reservation
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" aria-label="Site footer">
+  <div class="footer-brand-watermark" aria-hidden="true">
+    <div class="footer-watermark-bg">
+      <img src="assets/images/barista_craft.png" alt="" loading="lazy">
+    </div>
+    <span class="footer-watermark-text">mokkaa</span>
+  </div>
+
+  <div class="footer-main">
+    <div class="footer-top">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="blog.html">Journal</a>
+        <a href="#">Privacy Policy</a>
+      </nav>
+
+      <div class="footer-socials" aria-label="Social media links">
+        <a href="https://www.instagram.com/mokkaaa.coffee" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Mokkaa Coffee on Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">All rights reserved by @Mokkaa Coffee, Miraj</p>
+      <p class="footer-credit">Parshwanath Nagar, Miraj, Maharashtra 416416 · Open Tue–Sun 10am–10pm</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ===== SCRIPTS ===== -->
+<script src="js/main.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/faq.js"></script>
+
+<script>
+  // Set min date on reservation form
+  const reserveDate = document.getElementById('reserve-date');
+  if (reserveDate) {
+    reserveDate.min = new Date().toISOString().split('T')[0];
+  }
+
+  // Form submission
+  document.getElementById('reserve-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('reserve-submit-btn');
+    btn.textContent = '✓ Reservation Confirmed!';
+    btn.style.background = 'var(--forest-green)';
+    setTimeout(() => {
+      btn.innerHTML = `<svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Confirm Reservation`;
+      btn.style.background = '';
+    }, 3000);
+  });
+</script>
+
+</body>
+</html>

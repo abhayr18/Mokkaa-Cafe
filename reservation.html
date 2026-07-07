@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reserve a table at Mokkaa Coffee, Miraj. Book your perfect coffee experience — great ambiance, masterful coffee, outstanding hospitality in Parshwanath Nagar, Maharashtra.">
+  <title>Reservation — Mokkaa Coffee | Book Your Table | Miraj</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <style>
+    /* Page-specific overrides */
+    body { background: var(--cream); }
+
+    .reservation-hero {
+      position: relative;
+      height: 50vh;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 60px 40px;
+    }
+
+    .reservation-hero-bg {
+      position: absolute;
+      inset: 0;
+    }
+
+    .reservation-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .reservation-hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(42,16,8,0.75) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
+    }
+
+    .reservation-hero-content {
+      position: relative;
+      z-index: 2;
+      color: var(--white);
+    }
+
+    .reservation-hero-content h1 {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 5vw, 72px);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .reservation-hero-content p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* Opening hours card */
+    .hours-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--card-border);
+      color: var(--text-medium);
+    }
+
+    .hours-row strong {
+      color: var(--dark-brown);
+      font-weight: 600;
+    }
+
+    .hours-row:last-child { border-bottom: none; }
+
+    /* Map placeholder */
+    .map-placeholder {
+      width: 100%;
+      height: 220px;
+      background: var(--off-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1.5px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-top: 24px;
+      position: relative;
+    }
+
+    .map-placeholder img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.4;
+    }
+
+    .map-placeholder-label {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .map-placeholder-label svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--text-medium);
+      display: block;
+      margin: 0 auto 8px;
+    }
+
+    /* Success message */
+    .form-success {
+      display: none;
+      background: var(--forest-green);
+      color: var(--white);
+      padding: 20px 24px;
+      border-radius: var(--radius-md);
+      margin-top: 20px;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .reservation-hero { height: 40vh; padding: 40px 20px; }
+      .hours-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar" role="navigation">
+  <a href="index.html" class="navbar-logo">Mokkaa Coffee</a>
+  <div class="navbar-nav" role="menubar">
+    <a href="about.html" role="menuitem">About</a>
+    <a href="menu.html" role="menuitem">Menu</a>
+    <a href="blog.html" role="menuitem">Journal</a>
+  </div>
+  <a href="reservation.html" class="navbar-cta active" style="background:var(--forest-green);border-color:var(--forest-green);">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+    </svg>
+    Reserve
+  </a>
+  <button class="navbar-toggle" id="nav-toggle" aria-label="Toggle mobile menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-menu-close" id="mobile-menu-close">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="menu.html">Menu</a>
+  <a href="blog.html">Journal</a>
+  <a href="reservation.html">Reserve</a>
+</div>
+
+
+<!-- HERO -->
+<div class="reservation-hero" style="margin-top: 0;">
+  <div class="reservation-hero-bg">
+    <img src="assets/images/espresso_shot.png" alt="Espresso being pulled" loading="eager">
+  </div>
+  <div class="reservation-hero-content container" style="max-width: 100%;">
+    <h1>Reserve Your Table<br>at Mokkaa Coffee</h1>
+    <p>Miraj's favourite café — Parshwanath Nagar, inside Bhokare campus</p>
+  </div>
+</div>
+
+
+<!-- RESERVATION LAYOUT -->
+<main class="reservation-page" style="padding-top: 0;">
+  <div class="reservation-layout">
+
+    <!-- LEFT — INFO -->
+    <div class="reservation-info reveal">
+      <h1 style="font-size: clamp(32px, 3.5vw, 44px); margin-bottom: 16px;">Book Your Perfect<br>Coffee Moment</h1>
+      <p>We'd love to have you. Whether it's a quiet morning solo, a team meeting, or a special occasion — we'll make it memorable.</p>
+
+      <div class="info-items">
+
+        <div class="info-item">
+          <div class="info-item-icon">📍</div>
+          <div class="info-item-text">
+            <h4>Our Location</h4>
+            <p>Parshwanath Nagar, Miraj,<br>Sangli Miraj Kupwad,<br>Maharashtra 416416</p>
+            <p style="font-size:12px;color:var(--text-muted);margin-top:4px;">Inside Sanjay Bhokare Group of Institutes, Miraj</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-item-icon">📞</div>
+          <div class="info-item-text">
+            <h4>Contact</h4>
+            <p>Reach us on Instagram:<br><a href="https://www.instagram.com/mokkaaa.coffee" target="_blank" rel="noopener noreferrer" style="color:var(--coffee-dark);">@mokkaaa.coffee</a></p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-item-icon">🕐</div>
+          <div class="info-item-text">
+            <h4>Opening Hours</h4>
+            <div class="hours-grid">
+              <div>
+                <div class="hours-row"><span>Monday</span><strong style="color:#c0392b;">Closed</strong></div>
+                <div class="hours-row"><span>Tue – Fri</span><strong>10am – 10pm</strong></div>
+              </div>
+              <div>
+                <div class="hours-row"><span>Saturday</span><strong>10am – 10pm</strong></div>
+                <div class="hours-row"><span>Sunday</span><strong>10am – 10pm</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Google Maps Embed -->
+      <div style="margin-top:24px;border-radius:var(--radius-lg);overflow:hidden;height:220px;">
+        <iframe
+          title="Mokkaa Coffee on Google Maps"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3817.5!2d74.6540!3d16.8280!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc123003ba6fd6b%3A0xa89890fe9ccf8c46!2sMokkaa%20Coffee!5e0!3m2!1sen!2sin!4v1720000000000"
+          width="100%" height="220" style="border:0;display:block;"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+
+    <!-- RIGHT — FORM -->
+    <div class="reservation-form-box reveal reveal-delay-1">
+      <h2>Make a Reservation</h2>
+      <p>Fill in your details and we'll confirm your table within 24 hours.</p>
+
+      <form id="full-reserve-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="full-name">Full Name *</label>
+            <input type="text" id="full-name" name="name" placeholder="e.g. Alex Johnson" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="full-email">Email *</label>
+            <input type="email" id="full-email" name="email" placeholder="your@email.com" required autocomplete="email">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="full-phone">Phone</label>
+            <input type="tel" id="full-phone" name="phone" placeholder="+1 000 000 0000" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="full-guests">Number of Guests *</label>
+            <select id="full-guests" name="guests" required>
+              <option value="">Select guests</option>
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5">5 Guests</option>
+              <option value="6+">6+ Guests</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="full-date">Preferred Date *</label>
+            <input type="date" id="full-date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="full-time">Preferred Time *</label>
+            <select id="full-time" name="time" required>
+              <option value="">Select time</option>
+              <option value="07:00">7:00 AM</option>
+              <option value="08:00">8:00 AM</option>
+              <option value="09:00">9:00 AM</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="13:00">1:00 PM</option>
+              <option value="14:00">2:00 PM</option>
+              <option value="15:00">3:00 PM</option>
+              <option value="16:00">4:00 PM</option>
+              <option value="17:00">5:00 PM</option>
+              <option value="18:00">6:00 PM</option>
+              <option value="19:00">7:00 PM</option>
+              <option value="20:00">8:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="full-occasion">Occasion</label>
+          <select id="full-occasion" name="occasion">
+            <option value="">Select an occasion (optional)</option>
+            <option value="casual">Casual Visit</option>
+            <option value="work">Work / Study Session</option>
+            <option value="meeting">Business Meeting</option>
+            <option value="birthday">Birthday Celebration</option>
+            <option value="anniversary">Anniversary</option>
+            <option value="date">Romantic Date</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="full-special">Special Requests</label>
+          <textarea id="full-special" name="special" placeholder="Any dietary requirements, accessibility needs, or special requests…" style="height:100px;"></textarea>
+        </div>
+
+        <button type="submit" class="form-submit" id="full-reserve-submit">
+          <svg style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Confirm My Reservation
+        </button>
+
+        <div class="form-success" id="form-success-msg">
+          🎉 Thank you! Your table reservation at Mokkaa Coffee has been received. We'll get back to you shortly. See you soon!
+        </div>
+      </form>
+    </div>
+
+  </div>
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer" aria-label="Site footer">
+  <div class="footer-brand-watermark" aria-hidden="true">
+    <div class="footer-watermark-bg">
+      <img src="assets/images/barista_craft.png" alt="" loading="lazy">
+    </div>
+    <span class="footer-watermark-text">mokkaa</span>
+  </div>
+  <div class="footer-main">
+    <div class="footer-top">
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="reservation.html">Reservation</a>
+        <a href="blog.html">Journal</a>
+        <a href="#">Privacy Policy</a>
+      </nav>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/mokkaaa.coffee" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Mokkaa Coffee on Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">All rights reserved by @Mokkaa Coffee, Miraj</p>
+      <p class="footer-credit">Parshwanath Nagar, Miraj, Maharashtra 416416 · Open Tue–Sun 10am–10pm</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Set min date to today
+  const dateInput = document.getElementById('full-date');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;
+  }
+
+  // Form submission handler
+  document.getElementById('full-reserve-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('full-reserve-submit');
+    const successMsg = document.getElementById('form-success-msg');
+
+    btn.textContent = 'Submitting…';
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
+
+    setTimeout(() => {
+      btn.style.display = 'none';
+      successMsg.style.display = 'block';
+
+      // Scroll to success message
+      successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 1200);
+  });
+</script>
+
+</body>
+</html>
